@@ -1,8 +1,6 @@
-// postcss.config.js (cambia la extensión de .mjs a .js)
-/** @type {import('postcss-load-config').Config} */
-export default {
+module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
-  }
+  },
 }

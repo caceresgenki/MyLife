@@ -20,7 +20,7 @@ export default function Nav() {
           <a 
             href="#inicio" 
             onClick={(e) => handleScroll(e, 'inicio')}
-            className="font-serif text-2xl text-dark"
+            className="font-serif text-2xl text-dark font-bold"
           >
             G♡G
           </a>

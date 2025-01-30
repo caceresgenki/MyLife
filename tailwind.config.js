@@ -1,10 +1,10 @@
-// tailwind.config.js (cambia la extensión de .mjs a .js)
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./app/**/*.{js,jsx,ts,tsx,mdx}",
-    "./pages/**/*.{js,jsx,ts,tsx,mdx}",
-    "./components/**/*.{js,jsx,ts,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",  // Si usas la carpeta src
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
