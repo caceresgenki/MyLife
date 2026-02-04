@@ -21,6 +21,14 @@ const dancing = Dancing_Script({
   weight: ['400'],
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#B87B4B',
+};
+
 export const metadata = {
   title: {
     default: "G&G | Nuestra Historia",
@@ -38,22 +46,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://mylife-itsgenki.vercel.app'), // Reemplaza con tu dominio real
+  metadataBase: new URL('https://mylife-itsgenki.vercel.app'),
   alternates: {
     canonical: '/',
     languages: {
       'es-ES': '/es',
     },
   },
-  
-  // Configuración para viewport
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    viewportFit: 'cover',
-  },
-  
+
   // Open Graph
   openGraph: {
     title: 'G&G | Nuestra Historia',
@@ -62,7 +62,7 @@ export const metadata = {
     siteName: 'G&G Wedding',
     images: [
       {
-        url: 'https://mylife-itsgenki.vercel.app/og-image.jpg', // Reemplaza con la ruta de tu imagen
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'G&G | Nuestra Historia',
@@ -72,41 +72,52 @@ export const metadata = {
     type: 'website',
   },
   
-  // // Twitter
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'G&G | Nuestra Historia',
-  //   description: 'Descubre la historia de amor detrás de G&G, una celebración única de momentos especiales y conexiones duraderas.',
-  //   siteId: '@tuhandletwitter', // Reemplaza con tu handle de Twitter
-  //   creator: '@tuhandletwitter',
-  //   creatorId: '@tuhandletwitter',
-  //   images: ['https://tudominio.com/twitter-image.jpg'], // Reemplaza con la ruta de tu imagen
-  // },
+  // Twitter
+  twitter: {
+    card: 'summary_large_image',
+    title: 'G&G | Nuestra Historia',
+    description: 'Descubre la historia de amor detrás de G&G, una celebración única de momentos especiales y conexiones duraderas.',
+    images: ['/og-image.jpg'],
+  },
   
-  // // Verificación de sitio
-  // verification: {
-  //   google: 'tu-código-de-verificación-google',
-  //   yandex: 'tu-código-de-verificación-yandex',
-  //   yahoo: 'tu-código-de-verificación-yahoo',
-  // },
-  
-  // // Manifest para PWA
-  // manifest: '/manifest.json',
+  // Manifest para PWA
+  manifest: '/site.webmanifest',
   
   // Icons
   icons: {
-    icon: 'images/favicon.ico',
-    shortcut: 'images/favicon.ico',
-    apple: [
-      { url: 'images/apple-touch-icon.png' },
-      { url: 'images/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: '/images/favicon.ico',
+    shortcut: '/images/favicon.ico',
+    apple: '/images/apple-touch-icon.png',
     other: [
       {
-        rel: 'apple-touch-icon-precomposed',
-        url: 'images/apple-touch-icon.png',
+        rel: 'icon',
+        url: '/images/favicon-32x32.png',
+        sizes: '32x32',
       },
+      {
+        rel: 'icon',
+        url: '/images/favicon-16x16.png',
+        sizes: '16x16',
+      },
+      {
+        rel: 'apple-touch-icon',
+        url: '/images/apple-touch-icon.png',
+        sizes: '180x180',
+      }
     ],
+  },
+  
+  // Robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

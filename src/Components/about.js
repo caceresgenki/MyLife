@@ -14,7 +14,7 @@ export default function About() {
             Entre miradas cómplices y sonrisas compartidas, construimos un mundo donde cada <strong>Te Amo</strong> es el comienzo de una nueva aventura. Bienvenidos a nuestra historia, donde los pequeños momentos crean los recuerdos más grandes.
             </p>
           </div>
-          <div className="relative aspect-[3/4] w-full">
+          <div className="relative aspect-3/4 w-full">
             <Image
               src="/images/ImageAbout.jpg" // Asegúrate de colocar tu imagen en public/images/
               alt="Photographer portrait"
